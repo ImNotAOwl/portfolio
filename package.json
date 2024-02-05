@@ -13,5 +13,13 @@
     "nuxt": "^3.10.0",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+		"@types/node": "^20.10.5",
+		"typescript": "5.2.2",
+    "@nuxt/ui": "^2.13.0",
+    "@nuxtjs/tailwindcss": "^6.11.3",
+		"autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
   }
 }
