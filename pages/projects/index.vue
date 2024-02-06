@@ -4,7 +4,7 @@ import { ref } from "vue";
 
 <template>
   <div>
-    <h1 class="bg-rose-500">This is the HomePage</h1>
+    <h1>This is the "Projects" page</h1>
   </div>
 </template>
 

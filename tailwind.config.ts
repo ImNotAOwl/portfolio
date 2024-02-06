@@ -8,4 +8,9 @@ export default <Partial<Config>>{
     "./app/**/*.{ts,tsx,vue}",
     "./src/**/*.{ts,tsx,vue}",
   ],
+  theme: {
+    fontFamily: {
+      sans: ["Poppins", "Inter"],
+    },
+  },
 };
