@@ -10,7 +10,8 @@ export default <Partial<Config>>{
   ],
   theme: {
     fontFamily: {
-      sans: ["Poppins", "Inter"],
+      sans: ["Red Hat Display", "Inter"],
+      serif: ["DM Serif Display"],
     },
   },
 };
