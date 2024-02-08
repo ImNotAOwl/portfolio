@@ -4,7 +4,7 @@ import { ref } from "vue";
 
 <template>
   <div>
-    <h1>This is the "Skills" page</h1>
+    <h1>This is the "Contact" page</h1>
   </div>
 </template>
 
