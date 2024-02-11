@@ -1,4 +1,18 @@
-<script setup>
+<script setup lang="ts">
+import navbarStyle from "../composables/ui/navbarStyle";
+
+const colorMode = useColorMode();
+const isDark = computed({
+  get() {
+    return colorMode.value === "dark";
+  },
+  set() {
+    colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
+  },
+});
+
+useHead({ bodyAttrs: { class: "bg-gray-100 dark:bg-gray-900" } });
+
 const links = [
   [{ label: "MATTHIEU SIEGEL", to: "/" }],
   [
@@ -17,13 +31,22 @@ const links = [
   ],
   [
     {
-      label: "LinkedIn",
-      // icon: "i-grommet-icons-linkedin",
+      icon:
+        colorMode.value === "dark"
+          ? "i-heroicons-moon-20-solid"
+          : "i-heroicons-sun-20-solid",
+      label: "",
+      to: "",
+      click: () => (isDark.value = !isDark.value),
+    },
+    {
+      icon: "i-grommet-icons-linkedin",
+      label: "",
       to: "https://www.linkedin.com/in/matthieu-siegel/",
     },
     {
-      label: "Github",
-      // icon: "i-grommet-icons-github",
+      icon: "i-grommet-icons-github",
+      label: "",
       to: "https://github.com/ImNotAOwl",
     },
   ],
@@ -33,13 +56,37 @@ const links = [
 <template>
   <UHorizontalNavigation
     :links="links"
+    :ui="navbarStyle"
     class="border-b border-gray-200 dark:border-gray-800"
   >
     <template #default="{ link }">
       <span
-        class="group-hover:text-primary text-black relative font-serif text-lg"
+        v-if="link.label"
+        class="group-hover:text-primary text-black relative font-serif text-lg dark:text-slate-300"
+        dynamic
         >{{ link.label }}</span
       >
+    </template>
+    <template #icon="{ link }">
+      <ClientOnly>
+        <UIcon
+          v-if="
+            link.icon === 'i-heroicons-moon-20-solid' ||
+            link.icon === 'i-heroicons-sun-20-solid'
+          "
+          class="h-5 w-5"
+          :name="
+            isDark ? 'i-heroicons-sun-20-solid' : 'i-heroicons-moon-20-solid'
+          "
+          aria-label="Theme"
+        />
+        <UIcon
+          v-else-if="link.icon"
+          class="h-5 w-5"
+          :name="link.icon"
+          aria-label="Theme"
+        />
+      </ClientOnly>
     </template>
   </UHorizontalNavigation>
 </template>

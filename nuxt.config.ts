@@ -8,12 +8,17 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
   },
-  // css: ["~/assets/tailwind.css"],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  ui: {
+    icons: ["grommet-icons"],
+  },
+  colorMode: {
+    preference: "light",
   },
   pages: true,
 });

@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@iconify-json/grommet-icons": "^1.1.10",
     "@nuxt/content": "^2.12.0",
     "nuxt": "^3.10.0",
     "vue": "^3.4.15",
