@@ -1,0 +1,3 @@
+- Played a key role in the technical setup for sports events coverage.
+- Operated and maintained audiovisual equipment during live broadcasts.
+- Collaborated with the production team to ensure seamless on-air experiences.

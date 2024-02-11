@@ -1,0 +1,3 @@
+After 11 years as an audiovisual technician, I have decided to change the direction of my professional career and embark on a transition into the field of IT, aiming to become a develper. All these years in the audiovisual industry have taught me to be reactive and to constantly adapt to every situation. I learn quickly and enjoy discovering and using new work tools.
+
+I am adept at working in teams as well as independently. curious, rigorous, and committed, I enjoy taking on challenges and getting involved in project management. Before joining the BTS SIO option SLAM, I self-taught some programming basics. However, the objective of this year of training is to acquire technical knowledge and the fundamentals of languages used in web development.

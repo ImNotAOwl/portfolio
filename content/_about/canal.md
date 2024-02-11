@@ -1,0 +1,3 @@
+- Participated in the installation and troubleshooting of audio and video systems.
+- Supported the production team in delivering high-quality content.
+- Managed technical aspects to enhance the viewer experience.
