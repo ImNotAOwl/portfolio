@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import navbarStyle from "../composables/ui/navbarStyle";
+import { navbarStyle } from "../assets/css/componentStyle";
 
 const colorMode = useColorMode();
 const isDark = computed({
