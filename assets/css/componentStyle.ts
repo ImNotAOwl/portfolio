@@ -1,4 +1,4 @@
-export default <object>{
+export const navbarStyle: object = {
   wrapper: "relative w-full flex items-center justify-between",
   container: "flex items-center min-w-0",
   inner: "min-w-0",
@@ -27,5 +27,29 @@ export default <object>{
     color: "gray",
     variant: "solid",
     size: "xs",
+  },
+};
+
+export const cardStyle: object = {
+  base: "",
+  background: "bg-white dark:bg-gray-900",
+  divide: "divide-none",
+  ring: "ring-1 ring-gray-200 dark:ring-gray-800",
+  rounded: "rounded-lg",
+  shadow: "shadow-lg",
+  body: {
+    base: "",
+    background: "",
+    padding: "px-4 py-4 sm:p-4",
+  },
+  header: {
+    base: "",
+    background: "",
+    padding: "px-4 py-4 sm:px-4",
+  },
+  footer: {
+    base: "",
+    background: "",
+    padding: "px-4 py-4 sm:px-4",
   },
 };
