@@ -8,14 +8,16 @@
         I'm Matthieu !
       </h1>
       <ContentQuery :path="`/_home/hero`" find="one" v-slot="{ data }">
-        <ContentRendererMarkdown :value="data">
+        <ContentRendererMarkdown :value="data" class="mb-10 text-pretty">
           <template #empty>
             <p>No content found.</p>
           </template>
         </ContentRendererMarkdown>
       </ContentQuery>
-      <UButton>Contact me</UButton>
-      <UButton>About me</UButton>
+      <div class="space-x-4">
+        <UButton size="lg">Contact me</UButton>
+        <UButton size="lg" variant="outline">About me</UButton>
+      </div>
     </div>
     <div class="">
       <img

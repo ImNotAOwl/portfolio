@@ -4,7 +4,7 @@ export default <object>{
   inner: "min-w-0",
   base: "group relative w-full flex items-center gap-1.5 px-2 py-3 rounded-md font-medium text-sm focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:ring-inset focus-visible:ring-1 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 disabled:cursor-not-allowed disabled:opacity-75",
   before:
-    "before:absolute before:inset-x-0 before:inset-y-2 before:inset-px before:rounded-md hover:before:bg-gray-50 dark:hover:before:bg-gray-800/50",
+    "before:absolute before:inset-x-0 before:inset-y-2 before:inset-px before:rounded-md hover:before:bg-gray-100 dark:hover:before:bg-gray-800/50",
   after:
     "after:absolute after:bottom-0 after:inset-x-2.5 after:block after:h-[2px] after:mt-2",
   active:
