@@ -1,3 +1,3 @@
-- Contributed to the setup and maintenance of audiovisual equipment.
+- Contributed to the setup of graphics for live.
 - Collaborated in the production of various TV programs.
 - Ensured the smooth operation of technical aspects during live broadcasts.

@@ -31,10 +31,10 @@ export const navbarStyle: object = {
 };
 
 export const cardStyle: object = {
-  base: "",
-  background: "bg-white dark:bg-gray-900",
-  divide: "divide-none",
-  ring: "ring-1 ring-gray-200 dark:ring-gray-800",
+  base: "list-disc",
+  background: "bg-white dark:bg-slate-800",
+  divide: "divide dark:divide-slate-700",
+  ring: "ring-1 ring-gray-200 dark:ring-gray-700",
   rounded: "rounded-lg",
   shadow: "shadow-lg",
   body: {

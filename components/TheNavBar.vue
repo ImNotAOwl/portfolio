@@ -62,7 +62,7 @@ const links = [
     <template #default="{ link }">
       <span
         v-if="link.label"
-        class="group-hover:text-primary text-black relative font-serif text-lg dark:text-slate-300"
+        class="group-hover:text-primary text-black font-primary relative text-lg dark:text-slate-300"
         dynamic
         >{{ link.label }}</span
       >

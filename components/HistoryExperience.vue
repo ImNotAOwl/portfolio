@@ -11,28 +11,28 @@ interface Card {
 const oldXP: Array<Card> = [
   {
     logo: "logos/logo_canal_400x200.png",
-    job: "Audiovisual Technician",
+    job: "Audiovisual Technician - CFC",
     badge: ["TV", "Live", "Graphic Operator", "VizRT"],
     content: "canal",
   },
   {
-    logo: "logos/logo_tf1_400x200.png",
-    job: "Audiovisual Technician",
+		logo: "logos/logo_beinsports_400x200.png",
+    job: "Audiovisual Technician - Sports event",
     badge: ["TV", "Live", "Graphic Operator", "VizRT"],
-    content: "tf1",
-  },
-  {
-    logo: "logos/logo_beinsports_400x200.png",
-    job: "Audiovisual Technician",
-    badge: ["tv", "live", "graphic operator", "vizRT"],
     content: "beinsports",
   },
+	{
+		logo: "logos/logo_tf1_400x200.png",
+		job: "Audiovisual Technician - News",
+		badge: ["TV", "Live", "Graphic Operator", "VizRT"],
+		content: "tf1",
+	},
 ];
 </script>
 
 <template>
-  <div class="columns-3">
-    <UCard v-for="xp in oldXP" :ui="cardStyle" class="">
+  <div class="flex justify-center gap-5">
+    <UCard v-for="xp in oldXP" :ui="cardStyle" class="text-justify">
       <template #header>
         <div class="flex flex-col justify-center items-center">
           <img :src="xp.logo" alt="" srcset="" class="w-2/6 h-fit" />

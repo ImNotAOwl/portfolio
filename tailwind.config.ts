@@ -10,8 +10,8 @@ export default <Partial<Config>>{
   ],
   theme: {
     fontFamily: {
-      sans: ["Red Hat Display", "Inter"],
-      serif: ["DM Serif Display"],
+			sans: ['"Red Hat Display"'],
+			primary: ['"Red Hat Display"'],
     },
     container: {
       center: true,
