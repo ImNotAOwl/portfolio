@@ -8,36 +8,28 @@ interface Card {
   content: string;
 }
 
-const oldXP: Array<Card> = [
-  {
-    logo: "logos/logo_canal_400x200.png",
-    job: "Audiovisual Technician - CFC",
-    badge: ["TV", "Live", "Graphic Operator", "VizRT"],
-    content: "canal",
+defineProps({
+  cardList: {
+    type: Array<Card>,
+    required: true,
   },
-  {
-		logo: "logos/logo_beinsports_400x200.png",
-    job: "Audiovisual Technician - Sports event",
-    badge: ["TV", "Live", "Graphic Operator", "VizRT"],
-    content: "beinsports",
-  },
-	{
-		logo: "logos/logo_tf1_400x200.png",
-		job: "Audiovisual Technician - News",
-		badge: ["TV", "Live", "Graphic Operator", "VizRT"],
-		content: "tf1",
-	},
-];
+});
 </script>
 
 <template>
   <div class="flex justify-center gap-5">
-    <UCard v-for="xp in oldXP" :ui="cardStyle" class="text-justify">
+    <UCard
+      v-for="xp in cardList"
+      :ui="cardStyle"
+      class="my-5 dark:bg-slate-800 dark:divide-slate-700 flex-1"
+    >
       <template #header>
         <div class="flex flex-col justify-center items-center">
-          <img :src="xp.logo" alt="" srcset="" class="w-2/6 h-fit" />
-          <h2 class="text-xl font-semibold my-2">{{ xp.job }}</h2>
-          <div class="space-x-4">
+          <img :src="xp.logo" alt="" srcset="" class="w-fit h-16" />
+          <h2 class="text-xl font-semibold my-2 text-pretty text-center">
+            {{ xp.job }}
+          </h2>
+          <div class="flex flex-wrap justify-center gap-2">
             <UBadge v-for="tag in xp.badge" :label="tag" class="text-xs" />
           </div>
         </div>
