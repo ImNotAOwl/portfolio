@@ -7,7 +7,7 @@
       <slot></slot>
     </div>
 
-    <div class="flex w-full justify-center bottom-0">
+    <div class="flex w-full justify-center bottom-0 mt-10 mb-3">
       <TheCopyright />
     </div>
   </UContainer>
