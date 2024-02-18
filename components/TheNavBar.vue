@@ -20,10 +20,10 @@ const links = [
       label: "About",
       to: "/about",
     },
-    {
-      label: "Projects",
-      to: `/projects`,
-    },
+    // {
+    //   label: "Projects",
+    //   to: `/projects`,
+    // },
     {
       label: "Contact",
       to: "/contact",
@@ -57,7 +57,7 @@ const links = [
   <UHorizontalNavigation
     :links="links"
     :ui="navbarStyle"
-    class="border-b border-gray-200 dark:border-gray-800"
+    class="border-b border-gray-200 dark:border-gray-800 flex-wrap"
   >
     <template #default="{ link }">
       <span

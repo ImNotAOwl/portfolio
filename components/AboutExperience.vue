@@ -17,7 +17,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex justify-center gap-5">
+  <div class="flex justify-center gap-0 flex-col md:gap-5 md:flex-row">
     <UCard
       v-for="xp in cardList"
       :ui="cardStyle"
