@@ -1,0 +1,1 @@
+CFR is a company that provides training. During my BTS internship, I had the opportunity to redesign and develop the company's website, model MySQL's database, and deploy it on a cloud provider. Collaborating with other teams was crucial to enhance the value of our solution. The last task I was responsible for was writing user and technical documentation

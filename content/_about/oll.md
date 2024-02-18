@@ -1,0 +1,1 @@
+Ooolala is a 2D animation studio located in Valence, France. During my apprenticeship, I had the opportunity to contribute to the development of tools for production tracking and validation of exchanges with other studios. Communication, monitoring, and project management were also at the core of our concerns.

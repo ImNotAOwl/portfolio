@@ -1,0 +1,1 @@
+ST Microelectronics is an international semiconductor manufacturer. I joined the company in October 2023 for my 2-year master's apprenticeship. I am involved in the development of cross-functional tools to enhance the quality and manufacturing processes of our products. The Agile methodology is used in my team for continuous delivery and deployment.
