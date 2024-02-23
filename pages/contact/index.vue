@@ -1,10 +1,84 @@
-<script setup>
-import { ref } from "vue";
+<script setup lang="ts">
+import { z } from "zod";
+import clsx from "clsx";
+
+import type { FormSubmitEvent } from "#ui/types";
+
+const mailResult: Ref = ref(undefined);
+
+const schema: object = z.object({
+  name: z.string(),
+  email: z.string().email("Invalid email"),
+  subject: z.string().max(70),
+  message: z.string().max(3000),
+});
+
+type Schema = z.output<typeof schema>;
+
+const state = reactive({
+  name: undefined,
+  email: undefined,
+  subject: undefined,
+  message: undefined,
+});
+
+async function onSubmit(event: FormSubmitEvent<Schema>) {
+  // Do something with data
+  mailResult.value = { success: "ok" };
+  // mailResult.value = await $fetch("/api/contact", {
+  //   method: "POST",
+  //   body: state,
+  // });
+  console.log(mailResult.value);
+  setTimeout(() => (mailResult.value = undefined), 3000);
+}
 </script>
 
 <template>
-  <div>
-    <h1>This is the "Contact" page</h1>
+  <div class="static">
+    <h1 class="text-5xl font-semibold text-center py-10">Contact</h1>
+    <UForm
+      :schema="schema"
+      :state="state"
+      class="space-y-4 w-2/3 mx-auto"
+      @submit="onSubmit"
+    >
+      <UFormGroup label="Your name" name="name">
+        <UInput v-model="state.name" size="md" />
+      </UFormGroup>
+
+      <UFormGroup label="Your email" name="email">
+        <UInput v-model="state.email" type="email" size="md" />
+      </UFormGroup>
+
+      <UFormGroup label="Subject" name="subject">
+        <UInput v-model="state.subject" type="subject" size="md" />
+      </UFormGroup>
+
+      <UFormGroup label="Message" name="message">
+        <UTextarea
+          v-model="state.message"
+          type="message"
+          size="md"
+          :rows="6"
+          resize
+        />
+      </UFormGroup>
+
+      <UButton class="" type="submit" size="lg"> Submit </UButton>
+    </UForm>
+    <UAlert
+      :class="
+        clsx(
+          `absolute w-1/4 right-20 bottom-20 opacity-100 transition-opacity ease-in-out delay-150 duration-300`,
+          mailResult?.success ? `opacity-100` : `opacity-0`
+        )
+      "
+      icon="i-heroicons-envelope"
+      color="green"
+      variant="solid"
+      title="Well done, email sent!"
+    />
   </div>
 </template>
 
