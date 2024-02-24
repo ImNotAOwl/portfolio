@@ -15,17 +15,16 @@ const transporter = nodemailer.createTransport({
 
 export default defineEventHandler(async (event: H3Event) => {
   try {
-
     const body = await readBody(event);
 
     await isValid(body);
 
-    const mail = await transporter.sendMail({
-      from: `"${body.name}" <${body.email}>`,
+		const mail = await transporter.sendMail({
+      from: `"Portfolio contact" <${config.FROM_MAIL}>`,
       to: config.CONTACTMAIL,
       subject: body.subject,
-      text: body.message,
-      html: body.message,
+      text: `Sender : "${body.name}" <${body.email}> \n ${body.message}`,
+      html: `Sender : "${body.name}" <${body.email}> \n ${body.message}`,
     });
 
     return { success: "Mail sent !" };
