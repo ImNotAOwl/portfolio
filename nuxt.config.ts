@@ -2,7 +2,7 @@
 
 const { env } = process;
 const variables =
-  env.NODE_ENV === "dev"
+  env.NODE_ENV === "development"
     ? {
         MAILHOST: env.DEV_MAIL_HOST,
         MAILPORT: env.DEV_MAIL_PORT,

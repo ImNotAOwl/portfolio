@@ -1,12 +1,12 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
+  <div class="text-lg">
     <h1 class="text-5xl font-semibold text-center py-10">About</h1>
     <ContentQuery :path="`/_about/tv`" find="one" v-slot="{ data }">
       <!-- Bind with the <Tv/> component to render it -->
 
-      <ContentRendererMarkdown :value="data" class="text-pretty">
+      <ContentRendererMarkdown :value="data" class="text-pretty" tag="span">
         <template #empty>
           <p>No content found.</p>
         </template>
@@ -27,5 +27,7 @@
 </template>
 
 <style scoped>
-
+p {
+	margin: 1em 0 1em 0;
+}
 </style>

@@ -29,7 +29,7 @@ const oldXP: Array<Card> = [
 </script>
 
 <template>
-	<h2 class="text-3xl font-semibold text-left py-5"> <slot name="title"/></h2>
+  <h2 class="text-3xl font-semibold text-left py-5"><slot name="title" /></h2>
   <slot name="intro" class="my-10" />
   <AboutExperience :card-list="oldXP" />
   <slot name="after" />
