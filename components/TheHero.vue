@@ -15,8 +15,15 @@
         </ContentRendererMarkdown>
       </ContentQuery>
       <div class="space-x-4">
-        <UButton size="lg">Contact me</UButton>
-        <UButton size="lg" variant="outline">About me</UButton>
+        <UButton size="lg" @click="$router.push({ path: '/contact' })"
+          >Contact me</UButton
+        >
+        <UButton
+          size="lg"
+          variant="outline"
+          @click="$router.push({ path: '/about' })"
+          >About me</UButton
+        >
       </div>
     </div>
     <div class="">
