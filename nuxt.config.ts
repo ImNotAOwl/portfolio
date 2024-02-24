@@ -1,4 +1,22 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+const { env } = process;
+const variables =
+  env.NODE_ENV === "dev"
+    ? {
+        MAILHOST: env.DEV_MAIL_HOST,
+        MAILPORT: env.DEV_MAIL_PORT,
+        MAILUSER: env.DEV_MAIL_USER,
+        MAILPASSWORD: env.DEV_MAIL_PASSWORD,
+        CONTACTMAIL: env.CONTACT_MAIL,
+      }
+    : {
+        MAILHOST: env.PROD_MAIL_HOST,
+        MAILPORT: env.PROD_MAIL_PORT,
+        MAILUSER: env.PROD_MAIL_USER,
+        MAILPASSWORD: env.PROD_MAIL_PASSWORD,
+        CONTACTMAIL: env.CONTACT_MAIL,
+      };
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/ui", "@nuxt/content"],
@@ -21,11 +39,5 @@ export default defineNuxtConfig({
     preference: "light",
   },
   pages: true,
-  runtimeConfig: {
-    MAILHOST: process.env.MAILHOST,
-    MAILPORT: process.env.MAILPORT,
-    MAILUSER: process.env.MAILUSER,
-    MAILPASSWORD: process.env.MAILPASSWORD,
-    CONTACTMAIL: process.env.CONTACTMAIL,
-  },
+  runtimeConfig: { ...variables },
 });

@@ -6,7 +6,7 @@ import type { FormSubmitEvent } from "#ui/types";
 
 const mailResult: Ref = ref(undefined);
 
-const schema: object = z.object({
+const schema = z.object({
   name: z.string(),
   email: z.string().email("Invalid email"),
   subject: z.string().max(70),
@@ -24,13 +24,17 @@ const state = reactive({
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
   // Do something with data
-  mailResult.value = { success: "ok" };
-  // mailResult.value = await $fetch("/api/contact", {
-  //   method: "POST",
-  //   body: state,
-  // });
-  console.log(mailResult.value);
+  mailResult.value = await $fetch("/api/contact", {
+    method: "POST",
+    body: state,
+  });
+
   setTimeout(() => (mailResult.value = undefined), 3000);
+
+  state.name = undefined;
+  state.email = undefined;
+  state.subject = undefined;
+  state.message = undefined;
 }
 </script>
 

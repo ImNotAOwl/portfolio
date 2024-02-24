@@ -15,7 +15,6 @@ const transporter = nodemailer.createTransport({
 
 export default defineEventHandler(async (event: H3Event) => {
   try {
-    console.log(config);
 
     const body = await readBody(event);
 
@@ -28,7 +27,6 @@ export default defineEventHandler(async (event: H3Event) => {
       text: body.message,
       html: body.message,
     });
-    console.log(mail);
 
     return { success: "Mail sent !" };
   } catch (error: any) {
