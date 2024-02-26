@@ -1,8 +1,23 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { fullPath } = useRoute();
+
+useSeoMeta({
+  title: "About - Matthieu Siegel	",
+});
+
+useHead({
+  link: [
+    {
+      rel: "canonical",
+      href: `matthieusiegel.fr${fullPath}`,
+    },
+  ],
+});
+</script>
 
 <template>
   <div class="text-lg">
-    <h1 class="text-5xl font-semibold text-center py-10">About</h1>
+    <h1 class="text-5xl font-semibold text-center py-10">About 📚</h1>
     <ContentQuery :path="`/_about/tv`" find="one" v-slot="{ data }">
       <!-- Bind with the <Tv/> component to render it -->
 
@@ -21,7 +36,5 @@
         </template>
       </ContentRendererMarkdown>
     </ContentQuery>
-
-
   </div>
 </template>

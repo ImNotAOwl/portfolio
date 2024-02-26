@@ -1,9 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <section class="w-full h-[600px] flex justify-around pt-20">
-    <div class="w-3/6 h-fit">
-      <h1 class="text-7xl mb-10">
+  <section class="w-full flex flex-col-reverse justify-center pt-10 md:flex-row md:h-[600px] md:justify-around md:pt-20">
+    <div class="h-fit md:w-1/2">
+      <h1 class="text-5xl mb-10 md:text-7xl">
         Hi ! 👋 <br />
         I'm Matthieu !
       </h1>
@@ -30,7 +30,7 @@
       <img
         src="@/assets/img/me.jpg"
         alt=""
-        class="w-auto h-[500px] rounded-lg shadow-xl skew-y-1"
+        class="w-auto h-[380px] m-auto rounded-lg shadow-xl skew-y-1 pb-10 md:h-[435px] lg:h-[500px] md:pb-0 md:m-0"
       />
     </div>
   </section>

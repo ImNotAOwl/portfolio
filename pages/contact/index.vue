@@ -4,6 +4,21 @@ import clsx from "clsx";
 
 import type { FormSubmitEvent } from "#ui/types";
 
+const { fullPath } = useRoute();
+
+useSeoMeta({
+  title: "Contact - Matthieu Siegel",
+});
+
+useHead({
+  link: [
+    {
+      rel: "canonical",
+      href: `matthieusiegel.fr${fullPath}`,
+    },
+  ],
+});
+
 const mailResult: Ref = ref(undefined);
 
 const schema = z.object({
@@ -40,11 +55,15 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 
 <template>
   <div class="static">
-    <h1 class="text-5xl font-semibold text-center py-10">Contact</h1>
+    <h1 class="text-5xl font-semibold text-center py-10">Contact 💬</h1>
+    <p class="text-center pb-10 text-lg">
+      Feel free to contact me if you're looking for a Software Engineer, a
+      DevOps professional, or just to have a chat !
+    </p>
     <UForm
       :schema="schema"
       :state="state"
-      class="space-y-4 w-2/3 mx-auto"
+      class="space-y-4 px-3 mx-auto md:w-2/3 md:px-0"
       @submit="onSubmit"
     >
       <UFormGroup label="Your name" name="name">
