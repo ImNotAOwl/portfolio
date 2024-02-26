@@ -47,8 +47,14 @@ const oldXP: Array<Card> = [
 </script>
 
 <template>
-	<h2 class="text-3xl font-semibold text-left py-5"> <slot name="title"/></h2>
-  <slot name="intro" class="my-10" />
+  <h2 class="text-3xl font-semibold text-left pt-16 pb-5"><slot name="title" /></h2>
+  <slot name="intro_1" />
+  <br />
+  <slot name="intro_2" />
+  <br />
+  <slot name="intro_3" />
   <AboutExperience :card-list="oldXP" />
   <slot name="after" />
+  <br />
+  <slot name="outro" />
 </template>

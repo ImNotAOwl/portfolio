@@ -30,7 +30,11 @@ const oldXP: Array<Card> = [
 
 <template>
   <h2 class="text-3xl font-semibold text-left py-5"><slot name="title" /></h2>
-  <slot name="intro" class="my-10" />
+  <slot name="intro" />
   <AboutExperience :card-list="oldXP" />
-  <slot name="after" />
+  <slot name="after_1" />
+  <br />
+  <slot name="after_2" />
+  <br />
+  <slot name="outro" />
 </template>
