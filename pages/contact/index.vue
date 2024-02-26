@@ -14,7 +14,7 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: `matthieusiegel.fr${fullPath}`,
+      href: fullPath,
     },
   ],
 });

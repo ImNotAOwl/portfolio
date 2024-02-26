@@ -50,14 +50,14 @@ export default defineNuxtConfig({
         },
         {
           name: "og:image",
-          content: "http://matthieusiegel.fr/personal_website.png",
+          content: "https://matthieusiegel.fr/personal_website.png",
         },
       ],
       title: "Matthieu Siegel - Software engineer and DevOps enthusiastic",
       link: [
         {
           rel: "canonical",
-          href: "http://matthieusiegel.fr",
+          href: "https://www.matthieusiegel.fr",
         },
       ],
     },
