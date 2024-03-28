@@ -88,7 +88,13 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         />
       </UFormGroup>
 
-      <UButton class="" type="submit" size="lg"> Submit </UButton>
+      <UButton
+        type="submit"
+        size="lg"
+        icon="i-grommet-icons-send"
+        label="Submit"
+        trailing
+      />
     </UForm>
     <UAlert
       :class="

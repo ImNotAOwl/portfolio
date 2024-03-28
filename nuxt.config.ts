@@ -2,23 +2,24 @@
 
 const { env } = process;
 const variables =
-  env.NODE_ENV === "development"
-    ? {
-        MAILHOST: env.DEV_MAIL_HOST,
-        MAILPORT: env.DEV_MAIL_PORT,
-        MAILUSER: env.DEV_MAIL_USER,
-        MAILPASSWORD: env.DEV_MAIL_PASSWORD,
-        CONTACTMAIL: env.CONTACT_MAIL,
-        FROM_MAIL: env.FROM_MAIL,
-      }
-    : {
-        MAILHOST: env.PROD_MAIL_HOST,
-        MAILPORT: env.PROD_MAIL_PORT,
-        MAILUSER: env.PROD_MAIL_USER,
-        MAILPASSWORD: env.PROD_MAIL_PASSWORD,
-        CONTACTMAIL: env.CONTACT_MAIL,
-        FROM_MAIL: env.FROM_MAIL,
-      };
+  // env.NODE_ENV === "development"
+  //   ? {
+  //       MAILHOST: env.DEV_MAIL_HOST,
+  //       MAILPORT: env.DEV_MAIL_PORT,
+  //       MAILUSER: env.DEV_MAIL_USER,
+  //       MAILPASSWORD: env.DEV_MAIL_PASSWORD,
+  //       CONTACTMAIL: env.CONTACT_MAIL,
+  //       FROM_MAIL: env.FROM_MAIL,
+  //     }
+  // 	:
+  {
+    MAILHOST: env.PROD_MAIL_HOST,
+    MAILPORT: env.PROD_MAIL_PORT,
+    MAILUSER: env.PROD_MAIL_USER,
+    MAILPASSWORD: env.PROD_MAIL_PASSWORD,
+    CONTACTMAIL: env.CONTACT_MAIL,
+    FROM_MAIL: env.FROM_MAIL,
+  };
 
 export default defineNuxtConfig({
   app: {
@@ -77,7 +78,7 @@ export default defineNuxtConfig({
     },
   },
   ui: {
-    icons: ["grommet-icons"],
+    icons: ["grommet-icons", "heroicons"],
   },
   colorMode: {
     preference: "light",
